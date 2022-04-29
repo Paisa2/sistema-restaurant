@@ -2,8 +2,11 @@
 
 namespace App\Providers;
 
+use Illuminate\Contracts\Pagination\Paginator;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use NascentAfrica\Jetstrap\JetstrapFacade;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,5 +29,8 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         JetstrapFacade::useAdminLte3();
+
+        // Schema::defaultStringLength(191);
+
     }
 }
