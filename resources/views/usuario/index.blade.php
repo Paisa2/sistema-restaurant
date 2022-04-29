@@ -1,4 +1,4 @@
-@extends('usuariolte::page')
+@extends('adminlte::page')
 
 @section('title', 'usuario')
 
@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    @livewire('admin.users-index')
 @stop
 
 @section('css')

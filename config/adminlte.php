@@ -247,6 +247,18 @@ return [
             'can'  => 'manage-blog',
         ],
         [
+            'text'  => 'administrador',
+            'url'  => 'admin',
+            'icon'  => 'fas fa-fw fa-user',
+            
+        ],
+        [
+            'text'  => 'usuario',
+            'url'  => 'usuario',
+            'icon'  => 'fas fa-fw fa-user',
+            
+        ],
+        [
             'text'        => 'pages',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
