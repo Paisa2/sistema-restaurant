@@ -10,11 +10,13 @@ class UsersIndex extends Component
 {
     use WithPagination;
     protected $paginationTheme="bootstrap";
+    public $search;
     public function render()
     {
 
-        $Users =User::Paginate(); 
-        return view('livewire.admin.users-index');
-        //return view('livewire.admin.users-index', compact('users'));
+        $users =User::where('name','LIKE','%'. $this->search .'%')->
+        orWhere('email','LIKE','%'. $this->search .'%')->paginate(100); 
+        //return view('livewire.admin.users-index');
+        return view('livewire.admin.users-index', compact('users'));
     } 
 }

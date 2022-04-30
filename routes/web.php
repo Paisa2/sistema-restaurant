@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 
@@ -25,5 +25,9 @@ Route::middleware([
 
 
     Route::get('/usuario', function () {
-        return view('usuario/index');
+        return view('admin/users/index');
+    });
+
+    Route::get('/rol', function () {
+        return view('admin/users/edit');
     });
