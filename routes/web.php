@@ -33,3 +33,6 @@ Route::middleware([
     Route::get('/rol', function () {
         return view('admin/users/edit');
     });
+    Route::get('/reserva', function () {
+        return view('admin/reserva/index');
+    });
