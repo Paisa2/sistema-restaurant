@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
+
+Route::resource('plato', '\App\Http\Controllers\Admin\PlatoControlers');
+
+Route::middleware([
+    'auth:sanctum','verified'])->get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+
+    Route::get('/usuario', function () {
+        return view('admin/users/index');
+    });
+
+    Route::get('/rol', function () {
+        return view('admin/users/edit');
+    });
