@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\reservaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,6 +33,11 @@ Route::middleware([
     Route::get('/rol', function () {
         return view('admin/users/edit');
     });
-    Route::get('/reserva', function () {
-        return view('admin/reserva/index');
+    Route::get('/profile', function () {
+        return view('profile/show');
     });
+    Route::get('/reserva', function () {
+        return view('reserva/index');
+    });
+
+    Route::post ('/reserva',[reservaController::class,'store'])->name('reserva');

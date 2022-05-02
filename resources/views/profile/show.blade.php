@@ -1,7 +1,16 @@
+@extends('adminlte::page')
+
+@section('title', 'Perfil')
+
+@section('content_header')
+    <h1>perfil</h1>
+@stop
+
+@section('content')
 <x-app-layout>
     <x-slot name="header">
         <h2 class="h4 font-weight-bold">
-            {{ __('Profile') }}
+            {{ __('Perfil') }}
         </h2>
     </x-slot>
 
@@ -18,14 +27,7 @@
             <x-jet-section-border />
         @endif
 
-        @if (Laravel\Fortify\Features::canManageTwoFactorAuthentication())
-            @livewire('profile.two-factor-authentication-form')
-
-            <x-jet-section-border />
-        @endif
-
-        @livewire('profile.logout-other-browser-sessions-form')
-
+        
         @if (Laravel\Jetstream\Jetstream::hasAccountDeletionFeatures())
             <x-jet-section-border />
 
@@ -33,3 +35,24 @@
         @endif
     </div>
 </x-app-layout>
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
+
+
+
+<!--@if (Laravel\Fortify\Features::canManageTwoFactorAuthentication())
+            @livewire('profile.two-factor-authentication-form')
+
+            <x-jet-section-border />
+        @endif
+    -->
+
+        <!--@livewire('profile.logout-other-browser-sessions-form')
+    -->
