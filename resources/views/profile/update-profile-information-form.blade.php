@@ -1,17 +1,18 @@
 <x-jet-form-section submit="updateProfileInformation">
     <x-slot name="title">
-        {{ __('Profile Information') }}
+        {{ __('Informacion del perfil') }}
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Update your account\'s profile information and email address.') }}
+        {{ __('') }}
     </x-slot>
-
+    
     <x-slot name="form">
 
         <x-jet-action-message on="saved">
             {{ __('Saved.') }}
         </x-jet-action-message>
+        
 
         <!-- Profile Photo -->
         @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())

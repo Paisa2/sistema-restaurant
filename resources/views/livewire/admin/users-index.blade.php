@@ -5,7 +5,7 @@
             <Input wire:model="search" class="form-control" placeholder="ingrese el nombre o correo de un usuario">
         </div>
         <div class="card body">
-            <table class="table table-striped">
+            <table class="table table-dark table-striped mt-4">
                 <thead>
 
                 <tr>
